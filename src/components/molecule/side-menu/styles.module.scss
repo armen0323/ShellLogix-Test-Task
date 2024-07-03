@@ -1,0 +1,9 @@
+@import '../../../styles/mixin';
+@import '../../../styles/flex';
+
+.wrapper {
+  width  : 100%;
+  @include flex-column-align;
+  cursor : pointer;
+
+}

@@ -1,0 +1,41 @@
+@import '../../../styles/mixin';
+@import '../../../styles/flex';
+
+.wrapper {
+  width   : 100%;
+  padding : 6px 0;
+  @include flex-column-align;
+  gap     : 3px;
+
+  .name {
+	font-size   : 12px;
+	font-weight : 500;
+	line-height : 16px;
+	color       : #444746;
+  }
+
+  &:hover {
+	.name {
+	  color : #2E3EFF;
+	}
+
+	svg {
+	  path {
+		fill : #2E3EFF;
+	  }
+	}
+  }
+
+}
+
+.active {
+  .name {
+	color : #2E3EFF;
+  }
+
+  svg {
+	path {
+	  fill : #2E3EFF;
+	}
+  }
+}
