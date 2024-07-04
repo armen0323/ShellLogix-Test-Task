@@ -1,4 +1,4 @@
-import PageLayout from "@/layout/page-layout";
+import PageLayout from "../../layout/pageLayout";
 import {ConfigurationScreen} from "@/screens";
 import {Metadata} from "next";
 
@@ -7,10 +7,10 @@ export const metadata: Metadata = {
     description: "description"
 }
 
-const Configuration = () => {
-    return <PageLayout>
+const Configuration = () => (
+    <PageLayout>
         <ConfigurationScreen/>
     </PageLayout>
-}
+)
 
 export default Configuration

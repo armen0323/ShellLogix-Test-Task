@@ -1,16 +1,16 @@
-import PageLayout from "@/layout/page-layout";
-import { GovernanceScreen } from "@/screens";
-import { Metadata } from "next";
+import PageLayout from "../../layout/pageLayout";
+import {GovernanceScreen} from "@/screens";
+import {Metadata} from "next";
+
 export const metadata: Metadata = {
-  title: "Governance",
-  description: "description",
+    title: "Governance",
+    description: "description",
 };
-const Governance = () => {
-  return (
+const Governance = () => (
     <PageLayout>
-      <GovernanceScreen />
+        <GovernanceScreen/>
     </PageLayout>
-  );
-};
+);
+
 
 export default Governance;

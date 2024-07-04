@@ -1,14 +1,14 @@
-import PageLayout from "@/layout/page-layout";
+import PageLayout from "../../layout/pageLayout";
 import {ImpactScreen} from "@/screens";
 import {Metadata} from "next";
+
 export const metadata: Metadata = {
     title: 'Impact',
     description: "description"
 }
-const Impact = () => {
-    return <PageLayout>
+const Impact = () => (
+    <PageLayout>
         <ImpactScreen/>
     </PageLayout>
-}
-
+)
 export default Impact

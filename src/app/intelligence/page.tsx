@@ -1,14 +1,15 @@
-import PageLayout from "@/layout/page-layout";
+import PageLayout from "../../layout/pageLayout";
 import {IntelligenceScreen} from "@/screens";
 import {Metadata} from "next";
+
 export const metadata: Metadata = {
     title: 'Intelligence',
     description: "description"
 }
-const Intelligence = () => {
-    return <PageLayout>
+const Intelligence = () => (
+    <PageLayout>
         <IntelligenceScreen/>
     </PageLayout>
-}
+)
 
 export default Intelligence

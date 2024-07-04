@@ -1,17 +1,17 @@
-import PageLayout from "@/layout/page-layout";
-import { DocsScreen } from "@/screens";
-import { Metadata } from "next";
+import PageLayout from "../../layout/pageLayout";
+import {DocsScreen} from "@/screens";
+import {Metadata} from "next";
+
 export const metadata: Metadata = {
-  title: "Docs",
-  description: "description",
+    title: "Docs",
+    description: "description",
 };
 
-const Docs = () => {
-  return (
+const Docs = () => (
     <PageLayout>
-      <DocsScreen />
+        <DocsScreen/>
     </PageLayout>
-  );
-};
+)
+
 
 export default Docs;

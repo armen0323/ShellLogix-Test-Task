@@ -1,17 +1,16 @@
-import PageLayout from "@/layout/page-layout";
-import { DataScreen } from "@/screens";
-import { Metadata } from "next";
+import PageLayout from "../../layout/pageLayout";
+import {DataScreen} from "@/screens";
+import {Metadata} from "next";
 
 export const metadata: Metadata = {
-  title: "Data",
-  description: "description",
+    title: "Data",
+    description: "description",
 };
-const Data = () => {
-  return (
+const Data = () => (
     <PageLayout>
-      <DataScreen />
+        <DataScreen/>
     </PageLayout>
-  );
-};
+);
+
 
 export default Data;
