@@ -1,4 +1,5 @@
-<img width="881" alt="Снимок экрана 2024-07-04 в 15 36 57" src="https://github.com/armen0323/ShellLogix-Test-Task/assets/107411709/1681f652-6ab7-4312-9408-a9516ab6d06f">
+
+<img width="881" alt="Снимок экрана 2024-07-04 в 15 38 54" src="https://github.com/armen0323/ShellLogix-Test-Task/assets/107411709/dca248a6-631d-4ddf-8008-263bb80b505d">
 
 
 ## Installation
