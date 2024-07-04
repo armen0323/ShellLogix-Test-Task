@@ -1,6 +1,12 @@
-import {CheckboxProps} from "@mui/material";
+import {TextFieldProps} from "@mui/material";
+import {SxProps, Theme} from "@mui/system";
+import type { ChangeEventHandler } from "react";
 
-export interface ICheckboxProps extends Omit<CheckboxProps, "label" | "error"> {
-    label?: string,
-    error?: string
+export interface ITextareaProps extends Omit<TextFieldProps, "label" | "error" | "value"> {
+    label?: string;
+    warning?: string;
+    error?: string;
+    sx?: SxProps<Theme>;
+    value?: string;
+    onChange?: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
 }

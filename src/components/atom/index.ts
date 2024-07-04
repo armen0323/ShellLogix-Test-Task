@@ -1,4 +1,4 @@
-export {default as ButtonComponent} from './button'
+export {default as ButtonComponent} from './button-component'
 export {default as IconComponent} from './icon-component'
 export {default as Category} from './category'
 export {default as InputComponent} from './input-component'

@@ -39,7 +39,7 @@ export const categoryData: TCategoryData[] = [
     {
         name: 'Surveys',
         Icon: "IconSurveys",
-        navigate: '/surveys'
+        navigate: '/'
     },
     {
         name: 'Flows',

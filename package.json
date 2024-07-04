@@ -8,9 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test-all": "eslint . --ext ts --ext tsx --ext js && tsc --pretty --noEmit && npm run build"
   },
   "dependencies": {
+    "@apollo/client": "^3.10.8",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@hookform/resolvers": "^3.7.0",
@@ -45,6 +47,6 @@
     "eslint-config-next": "14.2.4",
     "eslint-plugin-storybook": "^0.8.0",
     "storybook": "^8.1.11",
-    "typescript": "^5"
+    "typescript": "^4.7.4"
   }
 }

@@ -1,5 +1,5 @@
 import { styled } from '@mui/system';
-import {Select} from "@mui/material";
+import { Select } from "@mui/material";
 
 export const SelectStyled = styled(Select)`
     width: 100%;

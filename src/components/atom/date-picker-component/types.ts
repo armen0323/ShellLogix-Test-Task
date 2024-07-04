@@ -1,6 +1,8 @@
-import {DatePickerProps} from "@mui/x-date-pickers";
-import {PickerValidDate} from "@mui/x-date-pickers/models";
+import dayjs, { Dayjs } from "dayjs";
 
-export interface IDatePicker  {
-    label?: string,
+export interface IDatePicker {
+    label?: string;
+    error?: string;
+    value: Dayjs | null;
+    onChange: (date: Dayjs | null) => void;
 }

@@ -1,5 +1,5 @@
-import { styled } from '@mui/system';
-import {TextField} from "@mui/material";
+import { styled } from "@mui/system";
+import TextField from "@mui/material/TextField";
 
 export const TextFieldStyled = styled(TextField)`
     width: 100%;

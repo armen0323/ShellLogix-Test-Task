@@ -4,8 +4,7 @@ const surveySchema = Yup.object().shape({
     name: Yup.string()
         .required('Name is required'),
 
-    selectComponent: Yup.mixed()
-        .oneOf(['Ten', 'Twenty', 'Thirty'], 'Select a valid option')
+    selectComponent: Yup.string()
         .required('Select one of the options'),
 
     recipients: Yup.mixed()
@@ -13,8 +12,7 @@ const surveySchema = Yup.object().shape({
         .required('Recipients category is required'),
 
     isSendRecipients: Yup.boolean()
-        .oneOf([true], 'Checkbox must be checked')
-        .required('Recipients Send is required'),
+        .oneOf([true], 'Checkbox must be checked'),
 
     deadlineDate: Yup.date()
         .required('Deadline date is required')

@@ -1,48 +1,36 @@
-"use client";
-import React, { FC, useState, forwardRef, ForwardedRef } from "react";
-import styles from './styles.module.scss';
-import { Select, MenuItem, SelectChangeEvent } from "@mui/material";
-import { ISelectProps } from "@/components/atom/select-component/types";
-import { SelectStyled } from "@/components/atom/select-component/select.styled";
+import React, { forwardRef } from "react";
+import { MenuItem, SelectChangeEvent } from "@mui/material";
+import { SelectStyled } from "./select.styled";
+import styles from "./styles.module.scss";
+import { ISelectProps } from "./types";
 
-const SelectComponent: FC<ISelectProps> = forwardRef(({
-                                                          label,
-                                                          warning,
-                                                          value: propValue,
-                                                          onChange: propOnChange,
-                                                          ...rest
-                                                      }, ref: ForwardedRef<HTMLSelectElement>) => {
-    const [value, setValue] = useState(propValue || '');
-
-    const handleChange = (event: SelectChangeEvent<{ value: unknown }>) => {
-        const newValue = event.target.value as string;
-        setValue(newValue);
-        if (propOnChange) {
-            propOnChange(event);
-        }
-    };
-
+const SelectComponent = forwardRef<HTMLSelectElement, ISelectProps>(
+  ({ label, data, warning, value, onChange, error, ...rest }, ref) => {
     return (
-        <div className={styles.wrapper}>
-            {label && <p className={styles.label}>{label}</p>}
-            <SelectStyled
-                ref={ref}
-                labelId="demo-customized-select-label"
-                id="demo-customized-select"
-                value={value}
-                onChange={handleChange}
-                {...rest}
-            >
-                <MenuItem value="">
-                    <em>None</em>
+      <div className={styles.wrapper}>
+        {label && <p className={styles.label}>{label}</p>}
+        <SelectStyled
+          ref={ref}
+          labelId="demo-customized-select-label"
+          id="demo-customized-select"
+          value={value}
+          onChange={onChange}
+        >
+          {data &&
+            data.map((element, index) => {
+              return (
+                <MenuItem value={element.value} key={index}>
+                  {element.name}
                 </MenuItem>
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
-            </SelectStyled>
-            {warning && <p className={styles.warning}>{warning}</p>}
-        </div>
+              );
+            })}
+        </SelectStyled>
+        {warning && <p className={styles.warning}>{warning}</p>}
+        {error && <p className={styles.error}>{error}</p>}
+      </div>
     );
-});
+  }
+);
 
+SelectComponent.displayName = "SelectComponent";
 export default SelectComponent;

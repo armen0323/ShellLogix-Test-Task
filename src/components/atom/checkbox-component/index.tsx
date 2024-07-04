@@ -1,20 +1,25 @@
-"use client"
-import { FC, ForwardedRef, forwardRef } from "react";
-import { Checkbox } from "@mui/material";
-import styles from './styles.module.scss';
-import FormControlLabel from "@mui/material/FormControlLabel";
-import { ICheckboxProps } from "@/components/atom/checkbox-component/types";
+import { type FC, ForwardedRef, forwardRef } from "react";
+import { Checkbox, FormControlLabel } from "@mui/material";
+import styles from "./styles.module.scss";
+import { ICheckboxProps } from "./types";
 
-const CheckboxComponent: FC<ICheckboxProps> = forwardRef(({ label, error, ...rest }, ref: ForwardedRef<HTMLInputElement>) => {
+const CheckboxComponent = forwardRef(
+  (
+    { label, error, ...rest }: ICheckboxProps,
+    ref: ForwardedRef<HTMLButtonElement>
+  ) => {
     return (
-        <div className={styles.wrapper}>
-            <FormControlLabel
-                control={<Checkbox {...rest} inputRef={ref} />}
-                label={label}
-            />
-            {error && <p className={styles.error}>{error}</p>}
-        </div>
+      <div className={styles.wrapper}>
+        <FormControlLabel
+          control={<Checkbox {...rest} ref={ref} />}
+          label={<span className={styles.label}>{label}</span>}
+        />
+        {error && <p className={styles.error}>{error}</p>}
+      </div>
     );
-});
+  }
+);
+
+CheckboxComponent.displayName = "CheckboxComponent";
 
 export default CheckboxComponent;
